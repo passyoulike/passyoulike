@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<manifest identifier="NCLEX-by-Nurse-VLog" version="1.2" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<manifest identifier="NCLEX-by-Nurse-VLog" version="1.3" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
   <metadata>
     <schema>ADL SCORM</schema>
-    <schemaversion>1.2</schemaversion>
+    <schemaversion>2004 3rd Edition</schemaversion>
   </metadata>
   <organizations default="WS_QUIZ_ORG">
     <organization identifier="WS_QUIZ_ORG">
       <title>NCLEX by Nurse VLog</title>
       <item identifier="WS_QUIZ_SCO" identifierref="WS_QUIZ_RES">
         <title>NCLEX by Nurse VLog-Course</title>
-        <adlcp:masteryscore>80</adlcp:masteryscore>
+        <imsss:sequencing>
+          <imsss:objectives>
+            <imsss:primaryObjective>
+              <imsss:minNormalizedMeasure>0.80</imsss:minNormalizedMeasure>
+            </imsss:primaryObjective>
+          </imsss:objectives>
+          <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+        </imsss:sequencing>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="WS_QUIZ_RES" type="webcontent" href="quiz.html" adlcp:scormtype="sco">
+    <resource identifier="WS_QUIZ_RES" type="webcontent" href="quiz.html" adlcp:scormType="sco">
       <file href="quiz.html" />
       <file href="quiz.swf" />
       <file href="scorm.js" />
